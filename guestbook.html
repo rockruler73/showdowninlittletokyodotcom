@@ -17,9 +17,9 @@
   </form>
 </div>
 
-{% for  in  reversed %}
+{% for message in site.data.guestbook_messages reversed %}
   <div>
-    <div><span style="font-weight: bold;">{{ . }}</span> ({{ . | date: "%Y-%m-%d" }})</div>
-    <div>{{ . }}</div>
+    <div><span style="font-weight: bold;">{{ message.author }}</span> ({{ message.timestamp | date: "%Y-%m-%d" }})</div>
+    <div>{{ message.body }}</div>
   </div>
 {% endfor %}
