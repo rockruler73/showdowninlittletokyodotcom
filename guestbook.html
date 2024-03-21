@@ -16,3 +16,10 @@
     </p>
   </form>
 </div>
+
+{% for  in  reversed %}
+  <div>
+    <div><span style="font-weight: bold;">{{ . }}</span> ({{ . | date: "%Y-%m-%d" }})</div>
+    <div>{{ . }}</div>
+  </div>
+{% endfor %}
