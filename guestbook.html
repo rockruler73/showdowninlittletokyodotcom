@@ -1,3 +1,8 @@
+---
+layout: guestbook
+title: the showdowninlittletokyo.com guestbook
+---
+
 <div>
   <h2>Sign the guestbook</h2>
 
@@ -17,9 +22,3 @@
   </form>
 </div>
 
-{% for message in site.data.guestbook_messages reversed %}
-  <div>
-    <div><span style="font-weight: bold;">{{ message.author }}</span> ({{ message.timestamp | date: "%Y-%m-%d" }})</div>
-    <div>{{ message.body }}</div>
-  </div>
-{% endfor %}
